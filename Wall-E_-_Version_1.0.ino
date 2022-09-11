@@ -31,7 +31,7 @@ void setup() {
 }
 
 void loop() {
-  pensar(); //Função principal
+  pensar();//Função principal
 }
 
 void pensar(){
@@ -43,14 +43,11 @@ void pensar(){
   }
   //Caso a distância seja menor do que a estabelecida, ele para, vai um pouco para trás, analisa as distâncias à direita e esquerda e seleciona a que for mais conveniente
   parar();
+  distFrente();
+  Serial.println(distancia);
   re();
   distEsquerda();
-  Serial.print("Esquerda: ");
-  Serial.println(distanciaEsquerda);
-  delay(1000);
   distDireita();
-  Serial.print("Direita: ");
-  Serial.println(distanciaDireita);
   delay(1000);
   olharFrente();
   delay(500);
